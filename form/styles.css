@@ -1,0 +1,174 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d0bfff;
+  align-content: center;
+}
+
+.form {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+  margin-bottom: 50px;
+  border-radius: 25px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+.input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input_date {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.select {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select:hover {
+  border-color: #666;
+}
+
+select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+.checkbox {
+  margin-top: 40px;
+  padding: 8px 0;
+}
+
+.input_checkbox {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #d0bfff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 16px; /* Changed font size for better visibility */
+  transition: all 0.5s ease;
+  margin: 5px;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0 7px 29px 0;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0 0 0 0;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.btn {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group input[type="checkbox"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 50%;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  box-shadow: 0 0 10px #888;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Add animation to the modal */
+.modal-content {
+  animation: modalzoom 0.3s;
+}
+
+@keyframes modalzoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
