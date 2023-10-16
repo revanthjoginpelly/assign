@@ -32,27 +32,16 @@ function handleSUbmit(event) {
     Number: number,
   };
 
-  // Validation function for email
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  // Validation function for number (assuming a basic 10-digit format)
   function isValidNumber(number) {
-    const numberRegex = /^\d{10}$/;
-    return numberRegex.test(number);
+    if (number.length === 10) {
+      return true;
+    }
   }
 
   function validateForm(formDetails) {
     for (const key in formDetails) {
       if (formDetails[key] === "") {
         alert(`Please enter a valid value for ${key}`);
-        return false; // Return false on validation failure
-      }
-
-      if (key === "Email" && !isValidEmail(formDetails[key])) {
-        alert("Please enter a valid email address.");
         return false;
       }
 
@@ -61,7 +50,7 @@ function handleSUbmit(event) {
         return false;
       }
     }
-    return true; // Return true if all fields are filled and valid
+    return true;
   }
 
   if (validateForm(formDetails)) {
